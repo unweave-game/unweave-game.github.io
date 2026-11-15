@@ -18,7 +18,7 @@
 <p><strong>앱명 / App:</strong> Unweave<br>
    <strong>패키지 / Package:</strong> com.unweave.game<br>
    <strong>운영자 / Operator:</strong> Unweave Studio<br>
-   <strong>시행일 / Effective Date:</strong> 2026-09-05</p>
+   <strong>시행일 / Effective Date:</strong> 2026-11-15</p>
 
 <hr>
 
@@ -34,8 +34,16 @@
     <li><strong>앱 사용 정보</strong> — 앱 실행, 화면 탭, 광고 동영상 조회 같은 상호작용.</li>
     <li><strong>진단 정보</strong> — 앱 실행 시간, 응답 없음 비율, 전력 사용 같은 앱·SDK 성능 정보.</li>
   </ul>
-  <p><strong>플레이 진행 데이터</strong>(스테이지 클리어 여부 등)는 기기 안에 저장되며 개발자에게 전송되지 않습니다.
-     다만 기기에서 Android 백업이 켜져 있으면, 기기 교체·재설치 때 진행도를 되살릴 수 있도록
+  <p>또 게임을 개선하기 위해 Google Firebase 애널리틱스(Google LLC)를 사용합니다. 이 SDK는 다음 정보를 수집합니다.</p>
+  <ul>
+    <li><strong>게임 플레이 기록</strong> — 판을 시작하고 끝낸 기록(판 번호, 모드, 클리어 여부, 걸린 시간, 틀린 횟수, 도달한 판), 튜토리얼 시작·완료.</li>
+    <li><strong>앱 사용 정보</strong> — 첫 실행, 세션, 사용 시간 같은 앱 이용 정보.</li>
+    <li><strong>기기 식별자</strong> — 앱 인스턴스 ID와 Android 광고 ID(AAID).</li>
+    <li><strong>대략적인 위치</strong> — IP 주소로 추정한 국가·지역 수준의 위치.</li>
+  </ul>
+  <p><strong>플레이 진행 상태</strong>(저장된 진행도)는 기기 안에 저장됩니다. 위 게임 플레이 기록은 게임 개선을 위해
+     Firebase 애널리틱스로 <strong>개발자에게 전송됩니다</strong>(개인을 식별하는 정보는 포함하지 않습니다).
+     또 Android 백업이 켜져 있으면 기기에서 Android 백업이 켜져 있으면, 기기 교체·재설치 때 진행도를 되살릴 수 있도록
      Android가 이 데이터를 <strong>사용자 본인의 Google 계정 백업</strong>에 포함할 수 있습니다. 개발자는 이 백업에 접근할 수 없습니다.</p>
   <p>이름·이메일·전화번호 등 개인을 식별하는 정보는 수집하지 않습니다.
      별도의 계정 생성이나 로그인도 요구하지 않습니다.</p>
@@ -43,15 +51,27 @@
 
 <h2>2. 수집 목적</h2>
 <div class="lang-block">
-  <p>위 정보는 Google AdMob이 <strong>광고 게재, 광고 성과 분석, 부정 클릭 등 사기 방지</strong>를 위해 사용합니다.
-     플레이 진행 데이터는 게임 진행 상태를 유지하기 위한 것이며, 개발자에게 전송되지 않습니다.</p>
+  <p>위 정보는 Google AdMob이 <strong>광고 게재, 광고 성과 분석, 부정 클릭 등 사기 방지</strong>를 위해 사용합니다.<br>
+     Firebase 애널리틱스로 받은 게임 플레이 기록은 <strong>어느 판이 어렵거나 어디서 그만두는지 파악해 게임을 개선</strong>하는 데만 씁니다.
+     기기에 저장된 진행 상태는 게임 진행을 유지하기 위한 것입니다.</p>
 </div>
 
 <h2>3. 제3자 제공</h2>
 <div class="lang-block">
   <p>수집된 어떠한 정보도 제3자에게 판매하지 않습니다.<br>
-  단, 광고 게재를 위해 Google AdMob SDK가 위 1항의 정보(기기 식별자, IP 주소, 앱 사용 정보, 진단 정보)를
+  단, 광고 게재를 위해 Google AdMob SDK가 위 1항의 정보(기기 식별자, IP 주소, 앱 사용 정보, 진단 정보)를,
+  게임 개선을 위해 Google Firebase 애널리틱스 SDK가 위 1항의 정보(게임 플레이 기록, 앱 사용 정보, 기기 식별자, 대략적인 위치)를
   암호화된 연결(TLS)로 Google LLC의 서버로 전송합니다. Google이 해당 데이터를 처리하는 방식은 아래 정책을 따릅니다.</p>
+  <p><strong>개인정보의 국외 이전</strong></p>
+  <ul>
+    <li>이전받는 자: Google LLC</li>
+    <li>이전되는 국가: 미국 등 Google 서버가 있는 국가</li>
+    <li>이전 일시·방법: 앱 사용 중 수시로, 암호화된 네트워크 전송(TLS)</li>
+    <li>이전 항목: 위 1항의 정보</li>
+    <li>이전 목적: 광고 게재(AdMob) · 게임 개선을 위한 이용 분석(Firebase 애널리틱스)</li>
+    <li>보유·이용 기간: Firebase 애널리틱스의 이벤트 기록은 수집 후 14개월이 지나면 삭제됩니다. AdMob 데이터는 Google의 정책에 따릅니다.</li>
+    <li>거부 방법: 앱을 삭제하면 이후 수집·이전이 중단됩니다. 광고 ID는 기기 설정에서 재설정·삭제할 수 있습니다.</li>
+  </ul>
   <ul>
     <li>Google 개인정보처리방침: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></li>
     <li>Google 광고 파트너가 데이터를 사용하는 방식: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">policies.google.com/technologies/partner-sites</a></li>
@@ -60,14 +80,16 @@
 
 <h2>4. 광고 및 인앱결제</h2>
 <div class="lang-block">
-  <p>Unweave에는 <strong>광고가 포함되어 있습니다</strong> — 퍼즐 화면 하단에 표시되는 배너 광고입니다.
-     화면을 가리는 전면 광고는 없습니다. <strong>인앱결제도 없습니다.</strong></p>
+  <p>Unweave에는 <strong>광고가 포함되어 있습니다</strong> — 퍼즐 화면 하단에 표시되는 배너 광고와,
+     판을 몇 번 깰 때마다 한 번씩 판 사이에 나오는 전면 광고입니다(처음 몇 판에는 나오지 않습니다).
+     <strong>인앱결제는 없습니다.</strong></p>
 </div>
 
 <h2>5. 데이터 보유 및 삭제</h2>
 <div class="lang-block">
   <p>기기에 저장된 진행 데이터는 앱을 삭제하면 기기에서 함께 삭제됩니다. Android 백업에 남은 사본은 기기 설정 또는 Google 계정의 백업 관리에서 지울 수 있습니다.<br>
   광고 식별자는 Android 기기 설정 &gt; 개인정보 보호 &gt; 광고에서 재설정하거나 삭제할 수 있습니다.<br>
+  Firebase 애널리틱스로 받은 게임 플레이 기록은 수집 후 14개월이 지나면 삭제됩니다.<br>
   Google이 보유한 광고 데이터의 삭제는 Google의 정책에 따릅니다.</p>
 </div>
 
@@ -98,7 +120,15 @@
     <li><strong>App interactions</strong> — such as app launches, taps, and ad video views.</li>
     <li><strong>Diagnostics</strong> — app and SDK performance information such as launch time, hang rate, and energy use.</li>
   </ul>
-  <p><strong>Play progress data</strong> (such as stage completion) is stored on the device and is never sent to the developer.
+  <p>To improve the game, we also use Google Firebase Analytics (Google LLC). This SDK collects:</p>
+  <ul>
+    <li><strong>Gameplay records</strong> — when you start and finish a level (level number, mode, whether it was cleared, time taken, number of mistakes, highest level reached), and tutorial start/completion.</li>
+    <li><strong>App usage</strong> — such as first open, sessions, and engagement time.</li>
+    <li><strong>Device identifiers</strong> — app instance ID and Android Advertising ID (AAID).</li>
+    <li><strong>Approximate location</strong> — country/region-level location estimated from the IP address.</li>
+  </ul>
+  <p><strong>Saved progress</strong> is stored on the device. The gameplay records above <strong>are sent to the developer</strong>
+     through Firebase Analytics to improve the game (they contain no personally identifying information).
      If Android backup is turned on for the device, Android may include this data in <strong>your own Google account backup</strong>
      so that progress can be restored when you change or reinstall the device. The developer cannot access this backup.</p>
   <p>We do not collect personally identifying information such as name, email, or phone number,
@@ -107,15 +137,19 @@
 
 <h3>2. Purpose of Collection</h3>
 <div class="lang-block">
-  <p>Google AdMob uses the information above for <strong>advertising, ad analytics, and fraud prevention</strong>.
-     Play progress data exists only to preserve game state and is never sent to the developer.</p>
+  <p>Google AdMob uses the information above for <strong>advertising, ad analytics, and fraud prevention</strong>.<br>
+     Gameplay records received through Firebase Analytics are used only to <strong>improve the game</strong> — to find which levels are hard and where players stop.
+     Progress saved on the device exists to preserve game state.</p>
 </div>
 
 <h3>3. Third-Party Sharing</h3>
 <div class="lang-block">
   <p>We do not sell any collected data to third parties.<br>
   However, to serve ads, the Google AdMob SDK transmits the information in section 1 (device identifiers,
-  IP address, app interactions, diagnostics) to Google LLC's servers over an encrypted (TLS) connection. Google's handling of that data is governed by the policies below.</p>
+  IP address, app interactions, diagnostics), and to improve the game, the Google Firebase Analytics SDK transmits the information in section 1
+  (gameplay records, app usage, device identifiers, approximate location), to Google LLC's servers over an encrypted (TLS) connection.
+  This data may be processed in the United States and other countries where Google operates servers.
+  Firebase Analytics event records are deleted 14 months after collection. Google's handling of that data is governed by the policies below.</p>
   <ul>
     <li>Google Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></li>
     <li>How Google uses data from partner sites: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">policies.google.com/technologies/partner-sites</a></li>
@@ -125,13 +159,15 @@
 <h3>4. Ads &amp; In-App Purchases</h3>
 <div class="lang-block">
   <p>Unweave <strong>contains advertisements</strong> — a banner ad displayed at the bottom of the puzzle
-     screen. There are no full-screen interstitial ads. <strong>There are no in-app purchases.</strong></p>
+     screen, and a full-screen interstitial ad shown between levels once every few cleared levels (not during the first few levels).
+     <strong>There are no in-app purchases.</strong></p>
 </div>
 
 <h3>5. Data Retention &amp; Deletion</h3>
 <div class="lang-block">
   <p>Progress data stored on the device is deleted from the device when the app is uninstalled. A copy kept in Android backup can be deleted from device settings or your Google account's backup management.<br>
   The advertising identifier can be reset or deleted in Android Settings &gt; Privacy &gt; Ads.<br>
+  Gameplay records received through Firebase Analytics are deleted 14 months after collection.<br>
   Deletion of advertising data held by Google is governed by Google's policies.</p>
 </div>
 
@@ -148,7 +184,7 @@
 
 <footer>
   <p>© 2026 Unweave Studio. All rights reserved.</p>
-  <p>Last updated: 2026-10-09 (패키지 이름 변경)</p>
+  <p>Last updated: 2026-11-15 (Firebase 애널리틱스 · 전면 광고 반영)</p>
 </footer>
 
 </body>
